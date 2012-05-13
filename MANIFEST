@@ -1,3 +1,4 @@
+.t.pl.swp
 Changes
 inc/Module/Install.pm
 inc/Module/Install/AuthorTests.pm
@@ -16,6 +17,11 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+sample/01_build.pl
+sample/02_retrieve_similarities_by_keyword.pl
+sample/03_retrieve_similarities_by_vectors_all.pl
+sample/data/sample.txt
+sample/SORRY_JAPANESE_ONLY
 t/00_compile.t
 xt/01_podspell.t
 xt/02_perlcritic.t
