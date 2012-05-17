@@ -18,7 +18,7 @@ MANIFEST			This list of files
 META.yml
 README
 sample/01_build.pl
-sample/02_retrieve_similarities_by_keyword.pl
+sample/02_retrieve_similarities.pl
 sample/03_retrieve_similarities_by_vectors_all.pl
 sample/data/sample.txt
 sample/SORRY_JAPANESE_ONLY

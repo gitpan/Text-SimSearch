@@ -6,7 +6,7 @@ use warnings;
 use Storable qw( nstore retrieve);
 use Time::HiRes qw(gettimeofday tv_interval);
 
-our $VERSION = '0.01_002';
+our $VERSION = '0.02';
 
 sub new {
     my $class = shift;
@@ -15,8 +15,9 @@ sub new {
 }
 
 sub add_item_from_file {
-    my $self = shift;
-    my $file = shift;
+    my $self             = shift;
+    my $file             = shift;
+    my $max_posting_size = shift || 1000;
 
     my $tmp_data;
     my $labels;
@@ -75,7 +76,7 @@ sub add_item_from_file {
         for ( sort { $b <=> $a } @array ) {
             my $p = pack( "w*", $_ );
             push @tmp, $p;
-            last LABEL if ++$n == 1000;
+            last LABEL if ++$n == $max_posting_size;
         }
 
         $posting_lists->{$key} = \@tmp;
